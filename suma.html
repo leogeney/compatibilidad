@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="corazon.webp">
+    <link rel="stylesheet" href="suma.css">
+</head>
+<body>
+    <h1>Compatibilidad con María</h1>
+<div class="container">
+<form id="nombreForm">
+    <label for="nombre">Ingresa tu nombre:</label>
+    <br>
+    <input type="text" id="nombre" name="nombre" autocomplete="off">
+    <p id="maria">+ Maria</p>
+    <br>
+    <div id="resultado">Resultado</div>
+    <button type="button" onclick="verificarNombre()">Verificar <i class="fa-regular fa-heart"></i></button>
+</form>
+
+
+</div>
+<script>
+    function verificarNombre() {
+        var nombreInput = document.getElementById("nombre");
+        var resultadoDiv = document.getElementById("resultado");
+
+        var nombre = nombreInput.value.toLowerCase();
+
+        if (nombre === "leonardo") {
+            resultadoDiv.textContent = "Compatible 100%";
+        } else {
+            resultadoDiv.textContent = "Compatible 0%";
+        }
+    
+    }
+</script>
+
+</body>
+</html>
